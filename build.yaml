@@ -17,7 +17,14 @@
 #     cmake-args: -DCONFIG_ZMK_STUDIO=y
 #     artifact-name: corne_left_with_studio
 #
+# The Equals 60 is ZMK's "boardsource5x12" shield (there is no equals60 shield).
+# The keymap and .conf in config/ must be named after the shield.
+#
+# settings_reset builds a firmware that wipes all stored settings (BT bonds,
+# keyboard name, selected profile). Flash it, then flash the normal firmware.
 ---
 include:
   - board: nice_nano_v2
     shield: boardsource5x12
+  - board: nice_nano_v2
+    shield: settings_reset

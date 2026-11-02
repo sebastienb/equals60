@@ -1,0 +1,21 @@
+config EQ60_BT_IDENTITY
+    bool "Use a firmware-chosen Bluetooth address instead of the chip's factory one"
+    depends on ZMK_BLE
+    help
+      The nRF52840 normally advertises with a fixed address burned into the
+      chip, so every host that ever paired with it recognises it forever.
+      With this enabled the address is derived from EQ60_BT_IDENTITY_SEED
+      and the chip id. Bump the seed and every host sees a brand-new
+      keyboard.
+
+if EQ60_BT_IDENTITY
+
+config EQ60_BT_IDENTITY_SEED
+    int "Identity seed; change it to get a new Bluetooth address"
+    default 1
+
+config EQ60_BT_IDENTITY_INIT_PRIORITY
+    int "Init priority (must run before ZMK_BLE_INIT_PRIORITY)"
+    default 49
+
+endif
