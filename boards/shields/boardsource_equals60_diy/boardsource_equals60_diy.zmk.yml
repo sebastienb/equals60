@@ -1,0 +1,8 @@
+file_format: "1"
+id: boardsource_equals60_diy
+name: Boardsource Equals 60 (DIY kit)
+type: shield
+url: https://www.boardsource.xyz/products/equals-60-kit
+requires: [pro_micro]
+features:
+  - keys

@@ -1,14 +1,15 @@
 # Equals 60 (nice!nano v2, wireless, no screen)
 
-ZMK config for the Boardsource Equals 60, built as ZMK's `boardsource5x12`
-shield on a `nice_nano_v2`. ZMK is pinned to `v0.3` in `config/west.yml`.
+ZMK config for the Boardsource Equals 60, built with the `boardsource_equals60_diy`
+shield defined in `boards/shields/` (the DIY PCB has its top two rows swapped
+compared to ZMK's stock 5x12 shield) on a `nice_nano_v2`. ZMK is pinned to `v0.3` in `config/west.yml`.
 
 Firmware is built by GitHub Actions on every push. Download the artifact,
 unzip it, and you get two files:
 
 | File | Purpose |
 |------|---------|
-| `boardsource5x12-nice_nano_v2-zmk.uf2` | the keyboard firmware |
+| `boardsource_equals60_diy-nice_nano_v2-zmk.uf2` | the keyboard firmware |
 | `settings_reset-nice_nano_v2-zmk.uf2` | wipes all saved settings (bonds, name, slot) |
 
 ## Flashing

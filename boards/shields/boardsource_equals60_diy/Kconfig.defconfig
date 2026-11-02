@@ -1,0 +1,6 @@
+if SHIELD_BOARDSOURCE_EQUALS60_DIY
+
+config ZMK_KEYBOARD_NAME
+    default "eq60"
+
+endif
